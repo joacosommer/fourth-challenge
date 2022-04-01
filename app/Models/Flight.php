@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Flight extends Model
 {
     use HasFactory;
-
     public function origin(){
         return $this->belongsTo(City::class);
     }
