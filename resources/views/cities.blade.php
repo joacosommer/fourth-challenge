@@ -116,7 +116,7 @@
                 <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
                 <div
                     class="relative inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
-                    <div class="w-full sm:max-w-xs">
+                    <div class="w-full sm:max-w-xs pb-2">
                         <div>
                             <div class="pb-2">
                                 <label for="text" class="block text-2xl font-medium text-gray-700 text-center">Confirm delete City?</label>
