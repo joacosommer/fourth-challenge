@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');
+})->name('home');
+
+Route::get('/cities', [CityController::class, 'index'])->name('home');
+Route::get('/fetch-cities', [CityController::class, 'fetchcities']);
+Route::post('/cities', [CityController::class, 'store']);
+Route::get('/edit-city/{id}', [CityController::class, 'edit']);
+Route::put('/update-city/{id}', [CityController::class, 'update']);
+Route::delete('/delete-city/{id}', [CityController::class, 'destroy']);
+
