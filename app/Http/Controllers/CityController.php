@@ -30,6 +30,7 @@ class CityController extends Controller
 
 
     public function store(Request $request) {
+        dd($request->all());
         $validator = Validator::make($request->all(), [
             'name'=> 'required|unique:cities',
         ]);
@@ -110,7 +111,7 @@ class CityController extends Controller
             {
                 return response()->json([
                     'status'=>404,
-                    'message'=>'No Student Found.'
+                    'message'=>'No City Found.'
                 ]);
             }
 
@@ -136,7 +137,4 @@ class CityController extends Controller
             ]);
         }
     }
-
-
-
 }
