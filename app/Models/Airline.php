@@ -9,11 +9,15 @@ class Airline extends Model
 {
     use HasFactory;
 
-    public function flight(){
+    protected $with = ['flights', 'cities'];
+    protected $table = 'airlines';
+    protected $fillable = ['name','description'];
+
+    public function flights(){
         return $this->hasMany(Flight::class);
     }
 
-    public function city()
+    public function cities()
     {
         return $this->belongsToMany(City::class,'airline__cities','airline_id', 'city_id')->withTimestamps();
     }

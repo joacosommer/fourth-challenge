@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Airline;
 use App\Models\City;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,12 +19,15 @@ class FlightFactory extends Factory
      */
     public function definition()
     {
+        $departureDate = Carbon::now()->subDays(rand(1, 30));
+        $arrivalDate = $departureDate->copy()->addHours(rand(1, 24));
+
         return [
             'origin_id'=>City::factory()->create(),
             'destination_id'=>City::factory()->create(),
             'airline_id'=>Airline::factory()->create(),
-            'takeoffTime'=>$this->faker->time,
-            'landingTime'=>$this->faker->time
+            'departureDate'=>$departureDate,
+            'arrivalDate'=>$arrivalDate,
         ];
     }
 }

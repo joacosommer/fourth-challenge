@@ -1,13 +1,11 @@
 <!doctype html>
 
 <title>Fourth Challenge</title>
-{{--<link href="resources/css/app.css" rel="stylesheet">--}}
-<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <meta name="csrf-token" content="{{csrf_token()}}">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-{{--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">--}}
 
 
 <style>
