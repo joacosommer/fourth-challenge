@@ -18,6 +18,12 @@ class AirlineController extends Controller
 //                ->paginate(6)->withQueryString()
         ]);
     }
+    //get all airlines api
+    public function getAllAirlines()
+    {
+        $airlines = Airline::query()->get();
+        return response()->json($airlines);
+    }
 
     public function fetchairlines()
     {
