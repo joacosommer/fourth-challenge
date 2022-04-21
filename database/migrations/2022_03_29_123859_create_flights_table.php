@@ -18,8 +18,8 @@ return new class extends Migration
             $table->foreignId('airline_id')->references('id')->on('airlines')->cascadeOnDelete();;
             $table->foreignId('origin_id')->references('id')->on('cities')->cascadeOnDelete();
             $table->foreignId('destination_id')->references('id')->on('cities')->cascadeOnDelete();
-            $table->time('takeoffTime');
-            $table->time('landingTime');
+            $table->dateTime('departureDate');
+            $table->dateTime('arrivalDate');
             $table->timestamps();
         });
     }
